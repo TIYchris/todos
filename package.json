@@ -4,7 +4,8 @@
   "description": "Todos",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
@@ -39,4 +40,3 @@
     "redux-thunk": "^2.0.1"
   }
 }
-

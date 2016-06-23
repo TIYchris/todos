@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve('./dist'),
     filename: "bundle.js",
-    sourceMapFilename: 'bundle.map'
+    sourceMapFilename: './bundle.map'
   },
   devtool: '#source-map',
   plugins: [

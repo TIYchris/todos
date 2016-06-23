@@ -2,26 +2,27 @@
   "todos": [
     {
       "text": "Item 1",
-      "id": 3,
-      "done": false
+      "id": 1
     },
     {
-      "id": 5,
-      "text": "hope this works",
-      "done": false
+      "text": "Item 2",
+      "id": 2
     },
     {
-      "id": 7,
-      "text": "hope this works"
+      "text": "Item 3",
+      "id": 3
     },
     {
-      "text": "Hello?",
-      "id": 8,
-      "done": false
+      "text": "Item 4",
+      "id": 4
     },
     {
-      "text": "Testing",
-      "id": 9
+      "text": "Item 5",
+      "id": 5
+    },
+    {
+      "text": "Item 6",
+      "id": 6
     }
   ]
 }
