@@ -1,33 +1,38 @@
 import axios from 'axios';
 import store from 'store';
 
+const url = window.location.origin + ":8001/todos";
+
 export function getTodos() {
-  return axios.get('http://localhost:8001/todos').then(function(resp){
+  return axios.get(url).then(function(resp) {
 
     store.dispatch({
       type: 'GET_TODOS',
       todos: resp.data
     });
-
   });
 }
 
-export function deleteTodos (id) {
-  return axios.delete('http://localhost:8001/todos/' + id).then(function(resp){
+export function deleteTodos(id) {
+  return axios.delete(url + id).then(function(resp) {
     getTodos();
   });
 }
 
-export function addTodos (payload) {
-  return axios.post('http://localhost:8001/todos/', {text:payload})
-    .then(function(resp){
+export function addTodos(payload) {
+  return axios.post(url, {
+    text: payload
+  })
+    .then(function(resp) {
       getTodos();
     });
 }
 
-export function markDone (id, done) {
-  return axios.patch('http://localhost:8001/todos/' + id, {done: done})
-    .then(function(resp){
+export function markDone(id, done) {
+  return axios.patch(url + id, {
+    done: done
+  })
+    .then(function(resp) {
       getTodos();
     });
 }
