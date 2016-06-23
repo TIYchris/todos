@@ -5,14 +5,14 @@ var config = require('config');
 var jsonServer = require('json-server');
 
 // Webpack
-gulp.task('webpack', function () {
+gulp.task('webpack', function() {
   return gulp.src('./src/app.js')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('./dist'));
 });
 
 // JSON API Server - run a REST server via a simple json file
-gulp.task('serve:api', function (cb) {
+gulp.task('serve:api', function(cb) {
   var apiServer = jsonServer.create();
   var router = jsonServer.router('db.json');
 
@@ -26,11 +26,11 @@ gulp.task('serve:api', function (cb) {
 // Simple Server
 gulp.task('serve:web', serve({
   root: './dist',
-  port: config.get('server.port')
+  port: process.env.PORT || config.get('server.port')
 }));
 
 // Watch for changes and reload stuff
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch('./src/**/*', ['webpack']);
 });
 
