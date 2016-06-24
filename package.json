@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/gulp run"
+    "start": "gulp serve",
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "axios": "^0.9.1",
