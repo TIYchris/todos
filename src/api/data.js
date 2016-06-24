@@ -1,7 +1,7 @@
 import axios from 'axios';
 import store from 'store';
 
-const url = window.location.origin + ":8001/todos";
+const url = "/todos";
 
 export function getTodos() {
   return axios.get(url).then(function(resp) {
